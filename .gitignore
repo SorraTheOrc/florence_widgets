@@ -12,3 +12,13 @@ logs
 results
 
 npm-debug.log
+
+# Emacs files #
+###############
+*.*~
+.#*
+*#
+
+# Build files #
+###############
+build/
