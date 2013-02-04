@@ -20,7 +20,7 @@ if (!window.widget){
 if (!window.widget.views){
     window.widget.views = {
         openUrl: function (url, navigateCallback, opt_viewTarget) {
-            window.external.notify(url);
+			window.top.postMessage(url, "*");
             if (navigateCallback) {
                 navigateCallback(window);
             };
