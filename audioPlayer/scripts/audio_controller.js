@@ -4,11 +4,11 @@ var ${widget.shortname}_audio_controller = {
         var albums = {
             "classical": {
                 "title": "Classical",
-                "preview": null,
+                "preview": "images/icon-audio-medium.png",
                 "assets": [
                     {
 	                "src":"assets/Blind_Blake-Diddie_Wa_Diddie.mp3"
-	            },
+                    },
                     {
                         "src":"assets/I.Allegro.mp3"
                     }
@@ -17,7 +17,7 @@ var ${widget.shortname}_audio_controller = {
             },
             "soundtrack": {
                 "title": "Soundtrack",
-                "preview": null,
+                "preview": "images/icon-audio-medium.png",
                 "assets": [
                     {
 	                "src":"assets/ScottJoplin-TheEntertainer1902.mp3"
