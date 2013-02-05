@@ -1,3 +1,4 @@
+//FIXME - this doesnt seem to be used
 if (!window.widget){
     window.widget = {
         /**
@@ -19,13 +20,22 @@ if (!window.widget){
 
 if (!window.widget.views){
     window.widget.views = {
+        _sendMessage: function (msg, callback) {
+			window.top.postMessage(msg, "*");
+            if (callback) {
+                callback(window);
+            }
+        },
+        
         openUrl: function (url, navigateCallback, opt_viewTarget) {
-            window.external.notify(url);
-            if (navigateCallback) {
-                navigateCallback(window);
-            };
-        }    
-    }
-}
+            this._sendMessage({message: "openUrl", url: url}, navigateCallback);
+        },
+
+        goHome: function (callback) {
+            this._sendMessage({message: "goHome"}, callback );
+        }
+    } 
+}    
+
 
 
