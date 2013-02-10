@@ -1,5 +1,5 @@
-//FIXME - this doesnt seem to be used
 if (!window.widget){
+    //FIXME - this doesnt seem to be used
     window.widget = {
         /**
          * Adds in the "proxify" method if it isn't in the widget
@@ -29,10 +29,6 @@ if (!window.widget.views){
         
         openUrl: function (url, navigateCallback, opt_viewTarget) {
             this._sendMessage({message: "openUrl", url: url}, navigateCallback);
-        },
-
-        goHome: function (callback) {
-            this._sendMessage({message: "goHome"}, callback );
         }
     } 
 }    
