@@ -1,5 +1,5 @@
 echo off
-rem ----- use the location of this script to infer $FLORENCE_HOME -------
+rem ----- use the location of this script to infer $FLORENCE_HOME and $WOOKIE_HOME -------
 set FLORENCE_HOME=%~dp0..
 if "%WOOKIE_HOME%"=="" set WOOKIE_HOME=%~dp0..\wookie
 
