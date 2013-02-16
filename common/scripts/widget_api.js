@@ -1,5 +1,4 @@
 if (!window.widget){
-    //FIXME - this doesnt seem to be used
     window.widget = {
         /**
          * Adds in the "proxify" method if it isn't in the widget
@@ -18,10 +17,11 @@ if (!window.widget){
     };
 }
 
+
 if (!window.widget.views){
     window.widget.views = {
         _sendMessage: function (msg, callback) {
-			window.top.postMessage(msg, "*");
+            window.top.postMessage(msg, "*");
             if (callback) {
                 callback(window);
             }
@@ -29,9 +29,18 @@ if (!window.widget.views){
         
         openUrl: function (url, navigateCallback, opt_viewTarget) {
             this._sendMessage({message: "openUrl", url: url}, navigateCallback);
+        },
+
+
+        /**
+         * Allow for the dynamic switching of theme for a widget
+         * FIXME: this is not platform specific and should move to the template definition along with some demo code.
+         */
+        switchTheme: function ( title ) {
+            $("head link[id='theme']").remove();
+            $("head").append("<link id='theme' href='style/" + title + ".css' rel='stylesheet' />");
         }
-    } 
-}    
+    
 
-
-
+    }
+}
