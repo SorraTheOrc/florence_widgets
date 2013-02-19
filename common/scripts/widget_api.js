@@ -17,6 +17,18 @@ if (!window.widget){
     };
 }
 
+if (!window.widget.views){
+    window.widget.preferences = {
+        store: [],
+        setItem:function(key, value) {
+            window.widget.preferences.store[key] = value;
+        },
+
+        getItem:function(key) {
+            return window.widget.preferences.store[key]
+        }
+    };
+}
 
 if (!window.widget.views){
     window.widget.views = {
@@ -34,7 +46,7 @@ if (!window.widget.views){
 
         /**
          * Allow for the dynamic switching of theme for a widget
-         * FIXME: this is not platform specific and should move to the template definition along with some demo code.
+         * FIXME: this is not platform specific and should move to the template definition along with some demo code.r
          */
         switchTheme: function ( title ) {
             $("head link[id='theme']").remove();
