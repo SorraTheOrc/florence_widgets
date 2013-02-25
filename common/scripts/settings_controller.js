@@ -24,7 +24,7 @@
     ${widget.shortname}_settings_controller.getSettings = function(group) {
 	var settings = [];
 	if (group == undefined || group == "Look And Feel") {
-	    settings[0] = new ${widget.shortname}_Setting("themeName", "Theme", "The name of the theme to use, either dark or light", "text");
+	    settings[0] = new ${widget.shortname}_Setting("themeName", "Theme", "The name of the theme to use, either dark, light or noIcons", "text");
 	} else if (group == "User") {
 	    settings[0] = new ${widget.shortname}_Setting("homepageURL", "Homepage URL", "Your homepage URL.", "email");
 	    settings[1] = new ${widget.shortname}_Setting("email", "EMail", "Your email address.", "email");
