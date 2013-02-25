@@ -17,7 +17,7 @@ if (!window.widget){
     };
 }
 
-if (!window.widget.views){
+if (!window.widget.preferences){
     window.widget.preferences = {
         store: [],
         setItem:function(key, value) {
